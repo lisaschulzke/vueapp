@@ -3,7 +3,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Plan msg="Welcome to Your Vue.js App"/>
   </div>
-</template>
+</template>a
 
 <script>
 import Plan from './views/Plan.vue'
