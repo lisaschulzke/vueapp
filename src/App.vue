@@ -2,6 +2,8 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Plan msg="Welcome to Your Vue.js App"/>
+    <list/>
+    <dropdown/>
   </div>
 </template>a
 
@@ -11,7 +13,7 @@ import Plan from './views/Plan.vue'
 export default {
   name: 'App',
   components: {
-    Plan
+    Plan,
   }
 }
 </script>

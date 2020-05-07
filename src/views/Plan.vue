@@ -2,59 +2,22 @@
 <div>
   <div class="header" id="navigationbar">
     <h3 class="headline">mensa app</h3>
-    <div class="dropdown">
-      <!-- <button class="dropbtn">choose a day</button> -->
-      <select class="select" name="selectbutton">
-        <option value="0">select day</option>
-        <option value="mon">monday</option>
-        <option value="tue">tuesday</option>
-        <option value="wed">wednesday</option>
-        <option value="thu">thursday</option>
-        <option value="fri">friday</option>
-      </select>
-      <!-- <div class="dropdown-content">
-        <a href="#">monday</a>
-        <a href="#">tuesday</a>
-        <a href="#">wednesday</a>
-        <a href="#">thursday</a>
-        <a href="#">friday</a>
-      </div>-->
-    </div>
+    <dropdown></dropdown>
+    <list></list>   
   </div>
-    <table class="table">
-      <tr>
-        <th>monday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>tuesday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>wednesday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>thursday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>friday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-    </table>
-    </div>
-
+</div>
 </template>
 
 <script>
+import list from '../components/list.vue'
+import dropdown from '../components/dropdown.vue'
+
 export default {
   name: "Plan",
+  components: {
+    list,
+    dropdown
+  },
   props: {
     msg: String
   }
@@ -76,18 +39,18 @@ export default {
   padding-top: 2vh;
   padding-left: 5vw;
 }
-.select {
+/* .select {
   margin-left: 30px;
   margin-top: 5px;
   cursor: pointer;
   color: white;
-}
+} */
 
 .headline {
   margin-top: 0px;
 }
 
-.table {
+/* .table {
   text-align: left;
   margin-top: 10vh;
   margin-left: 0px;
@@ -96,5 +59,5 @@ export default {
 th,
 td {
   padding-left: 5vw;
-}
+} */
 </style>
