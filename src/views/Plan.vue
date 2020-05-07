@@ -3,6 +3,7 @@
   <div class="header" id="navigationbar">
     <h3 class="headline">mensa app</h3>
     <dropdown></dropdown>
+    {{loadedData}}
     <list></list>   
   </div>
 </div>
@@ -11,6 +12,7 @@
 <script>
 import list from '../components/list.vue'
 import dropdown from '../components/dropdown.vue'
+import axios from 'axios'
 
 export default {
   name: "Plan",
@@ -20,6 +22,21 @@ export default {
   },
   props: {
     msg: String
+  },
+  data: function() {
+    return {
+      loadedData: 'no data loaded',
+    }
+  },
+  mounted() {
+    axios.get('http://localhost:3000/mensa/Di')
+    .then(response => {
+      this.loadedData = response
+
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
 };
 </script>
