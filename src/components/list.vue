@@ -1,4 +1,5 @@
 <template>
+<div>
   <table class="table">
       <tr>
         <th>monday</th>
@@ -26,13 +27,16 @@
         <td>meal 2</td>
       </tr>
     </table>
+    {{loadedData}}
+    </div>
 </template>
 
 <script>
 export default {
   name: "list",
   props: {
-    msg: String
+    msg: String,
+    loadedData: String,
   }
 };
 </script>

@@ -23,8 +23,9 @@
 export default {
   name: "dropdown",
   props: {
-    msg: String
-  }
+    msg: String,
+    loadedData: String,
+  },
 };
 </script>
 

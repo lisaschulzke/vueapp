@@ -31,7 +31,7 @@ export default {
   mounted() {
     axios.get('http://localhost:3000/mensa/Di')
     .then(response => {
-      this.loadedData = response
+      this.loadedData = response.data
 
     })
     .catch(error => {
