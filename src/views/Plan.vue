@@ -1,11 +1,12 @@
 <template>
 <div>
   <div class="header" id="navigationbar">
-    <h3 class="headline">mensa app</h3>
-    <dropdown></dropdown>
-    {{loadedData}}
-    <list></list>   
+    <h3 class="headline">mensa app.....</h3>
+    {{loadedData.data}}
+    <dropdown :days='loadedData.data'></dropdown>
+    <list :meals='loadedData.data'></list>   
   </div>
+
 </div>
 </template>
 
@@ -21,7 +22,7 @@ export default {
     dropdown
   },
   props: {
-    msg: String
+    
   },
   data: function() {
     return {
@@ -31,7 +32,7 @@ export default {
   mounted() {
     axios.get('http://localhost:3000/mensa/Di')
     .then(response => {
-      this.loadedData = response.data
+      this.loadedData = response
 
     })
     .catch(error => {
@@ -45,7 +46,7 @@ export default {
 <style scoped>
 .header {
   color: whitesmoke;
-  background-color: black;
+  background-color: grey;
   display: flex;
   flex-direction: row;
   height: 15vh;

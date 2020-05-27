@@ -1,8 +1,14 @@
 <template>
 <div>
   <table class="table">
-      <tr>
+      <!-- <tr v-if="meals.length > 0">
         <th>monday</th>
+        <! <td v-for='meal in meals' :key='meal'>{{meals.meal}}</td> -->
+        <!-- <td>meal 2</td>
+        <td>meal 2</td>
+      </tr> -->
+      <tr v-if='days.length > 0'>
+        <th v-for='day in days' :key="day">{{days.day}}</th>
         <td>meal 1</td>
         <td>meal 2</td>
       </tr>
@@ -35,8 +41,10 @@
 export default {
   name: "list",
   props: {
-    msg: String,
+    mensaFact: Object,
     loadedData: String,
+    meals: Array,
+    days: Array
   }
 };
 </script>

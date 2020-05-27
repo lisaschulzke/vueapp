@@ -2,18 +2,22 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Plan msg="Welcome to Your Vue.js App"/>
-    <list/>
-    <dropdown/>
+    <!-- <list/>
+    <dropdown/> -->
   </div>
 </template>a
 
 <script>
 import Plan from './views/Plan.vue'
+// import dropdown from './components/dropdown.vue'
+// import list from './components/list.vue'
 
 export default {
   name: 'App',
   components: {
     Plan,
+    // dropdown,
+    // list
   }
 }
 </script>
