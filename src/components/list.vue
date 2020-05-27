@@ -1,44 +1,30 @@
 <template>
 <div>
   <table class="table">
-      <tr v-if='days.length > 0'>
-        <th>monday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>tuesday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>wednesday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>thursday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
-      <tr>
-        <th>friday</th>
-        <td>meal 1</td>
-        <td>meal 2</td>
-      </tr>
+
+    <th>category</th>
+    <th>name</th>
+    <th>day</th>
+    
     </table>
-    {{loadedData}}
+    <mahlzeiten v-for="mealsTable in dataTable" :key="mealsTable" :meals='mealsTable'></mahlzeiten>
+    <!-- {{loadedData}} -->
     </div>
 </template>
 
 <script>
+import mahlzeiten from '../components/mahlzeiten.vue'
 export default {
   name: "list",
   props: {
     mensaFact: Object,
     loadedData: String,
     meals: Array,
-    days: Array
+    days: Array,
+    dataTable: String
+  },
+  components: {
+  mahlzeiten
   }
 };
 </script>

@@ -2,9 +2,7 @@
       <tr>
           <th>{{meals.category}}</th>
           <td>{{meals.day}}</td>
-          <td>{{meals.id}}</td>
           <td>{{meals.name}}</td>
-
       </tr>
 </template>
 
