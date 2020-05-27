@@ -2,10 +2,9 @@
 <div>
   <table class="table">
 
-    <th>category</th>
-    <th>name</th>
+    <th id="cat1">category</th>
     <th>day</th>
-    
+    <th id="nam1">name</th>
     </table>
     <mahlzeiten v-for="mealsTable in dataTable" :key="mealsTable" :meals='mealsTable'></mahlzeiten>
     <!-- {{loadedData}} -->
@@ -38,6 +37,15 @@ export default {
 }
 th,
 td {
-  padding-left: 5vw;
+  padding-left: 1vw;
+}
+
+#cat1 {
+  padding-right: 5vw;
+  padding-left: 0vw;
+}
+#nam1 {
+  padding-left: 20vw;
+  /* text-align: center; */
 }
 </style>

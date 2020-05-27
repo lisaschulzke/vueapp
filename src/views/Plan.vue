@@ -4,7 +4,7 @@
     <h3 class="headline">mensa app</h3>
     <!-- {{loadedData.data}} -->
     <dropdown :days='loadedData.data'></dropdown>
-    <list :dataTable='loadedData.data'></list>
+    <list :dataTable='loadedData.data' id='tablecontent'></list>
     {{mahlzeiten}}   
   </div>
 
@@ -14,7 +14,6 @@
 <script>
 import list from '../components/list.vue'
 import dropdown from '../components/dropdown.vue'
-import mahlzeiten from '../components/mahlzeiten.vue'
 import axios from 'axios'
 // import mahlzeiten from '../components/mahlzeiten.vue'
 export default {
@@ -77,4 +76,8 @@ th,
 td {
   padding-left: 5vw;
 } */
+#tablecontent {
+  color: black;
+  margin-left: 8vw;
+}
 </style>
