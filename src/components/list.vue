@@ -1,14 +1,8 @@
 <template>
 <div>
   <table class="table">
-      <!-- <tr v-if="meals.length > 0">
-        <th>monday</th>
-        <! <td v-for='meal in meals' :key='meal'>{{meals.meal}}</td> -->
-        <!-- <td>meal 2</td>
-        <td>meal 2</td>
-      </tr> -->
       <tr v-if='days.length > 0'>
-        <th v-for='day in days' :key="day">{{days.day}}</th>
+        <th>monday</th>
         <td>meal 1</td>
         <td>meal 2</td>
       </tr>

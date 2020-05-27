@@ -1,10 +1,10 @@
 <template>
 <div>
   <div class="header" id="navigationbar">
-    <h3 class="headline">mensa app.....</h3>
-    {{loadedData.data}}
+    <h3 class="headline">mensa app</h3>
+    <!-- {{loadedData.data}} -->
     <dropdown :days='loadedData.data'></dropdown>
-    <list :meals='loadedData.data'></list>   
+    <list></list>   
   </div>
 
 </div>
@@ -14,7 +14,7 @@
 import list from '../components/list.vue'
 import dropdown from '../components/dropdown.vue'
 import axios from 'axios'
-
+// import mahlzeiten from '../components/mahlzeiten.vue'
 export default {
   name: "Plan",
   components: {
@@ -33,7 +33,6 @@ export default {
     axios.get('http://localhost:3000/mensa/Di')
     .then(response => {
       this.loadedData = response
-
     })
     .catch(error => {
       console.log(error);
@@ -63,11 +62,9 @@ export default {
   cursor: pointer;
   color: white;
 } */
-
 .headline {
   margin-top: 0px;
 }
-
 /* .table {
   text-align: left;
   margin-top: 10vh;

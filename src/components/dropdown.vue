@@ -1,10 +1,7 @@
 <template>
 <div>
   <div class="dropdown">
-      <button class="dropbtn">choose a day</button>
-      <!-- {{days}} -->
-      {{days}}
-      <select v-if="days.length > 0">
+      <select class="select" name="selectbutton">
         <option v-for='day in days' :key='day'>{{day.day}}</option>
         <!-- <option value="tue">tuesday</option>
         <option value="wed">wednesday</option>
@@ -12,13 +9,6 @@
         <option value="fri">friday</option> -->
       </select>
   {{mensaCount}}
-      <!-- <div class="dropdown-content">
-        <a href="#">monday</a>
-        <a href="#">tuesday</a>
-        <a href="#">wednesday</a>
-        <a href="#">thursday</a>
-        <a href="#">friday</a>
-      </div>-->
     </div>
 
     </div>
