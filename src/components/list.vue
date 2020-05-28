@@ -1,18 +1,26 @@
 <template>
-<div>
-  <table class="table">
+    <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      controls
+      indicators
+      background="#ababab"
+      img-width="50vw"
+      img-height="20vh"
+      style="text-shadow: 1px 1px 2px #333;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd">
 
-    <th id="cat1">category</th>
-    <th>day</th>
-    <th id="nam1">name</th>
-    </table>
-    <mahlzeiten v-for="mealsTable in dataTable" :key="mealsTable" :meals='mealsTable'></mahlzeiten>
-    <!-- {{loadedData}} -->
-    </div>
+      <b-carousel-slide v-for="mealsTable in dataTable" :key="mealsTable"
+        img-src="https://picsum.photos/1024/480/?image=52"> 
+        <mahlzeiten  :meals="mealsTable"></mahlzeiten>
+      </b-carousel-slide>
+    </b-carousel>
 </template>
 
 <script>
-import mahlzeiten from '../components/mahlzeiten.vue'
+import mahlzeiten from "../components/mahlzeiten.vue";
 export default {
   name: "list",
   props: {
@@ -23,21 +31,14 @@ export default {
     dataTable: String
   },
   components: {
-  mahlzeiten
+    mahlzeiten
   }
 };
 </script>
 
 <style scoped>
-.table {
-  text-align: left;
-  margin-top: 20vh;
-  margin-left: 0px;
-  color: black;
-}
-th,
-td {
-  padding-left: 1vw;
+/* ul {
+  padding-top: 5vh;
 }
 
 #cat1 {
@@ -47,5 +48,14 @@ td {
 #nam1 {
   padding-left: 20vw;
   /* text-align: center; */
+/* }
+#list {
+  padding-top: 30vh;
+  margin-top: 30vh;
+} */
+
+#carousel-1 {
+  width: 10vw;
+  height: 50vh;
 }
 </style>

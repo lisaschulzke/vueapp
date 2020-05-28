@@ -56,6 +56,8 @@ export default {
   padding: 8px;
   padding-top: 2vh;
   padding-left: 5vw;
+  padding-bottom: 20vh;
+  margin-bottom: 20vh;
 }
 /* .select {
   margin-left: 30px;
