@@ -3,11 +3,10 @@
   <div class="header" id="navigationbar">
     <h3 class="headline">mensa app</h3>
     <!-- {{loadedData.data}} -->
-    <dropdown :days='loadedData.data'></dropdown>
-    <list :dataTable='loadedData.data' id='tablecontent'></list>
-    {{mahlzeiten}}   
+    <dropdown :days='loadedData.day'></dropdown>
   </div>
-
+  <list :dataTable='loadedData.name' id='tablecontent'>{{mahlzeiten}}</list>
+      
 </div>
 </template>
 
@@ -31,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('http://localhost:3000/mensa/Di')
+    axios.get('http://3.121.41.235:3000/meals/60')
     .then(response => {
       this.loadedData = response
     })
@@ -56,8 +55,8 @@ export default {
   padding: 8px;
   padding-top: 2vh;
   padding-left: 5vw;
-  padding-bottom: 20vh;
-  margin-bottom: 20vh;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
 }
 /* .select {
   margin-left: 30px;

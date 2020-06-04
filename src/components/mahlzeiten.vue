@@ -1,9 +1,9 @@
 <template>
-      <li>
+<li>
           <h5>{{meals.category}}</h5>
           <h4>{{meals.day}}</h4>
           <h4>{{meals.name}}</h4>
-      </li>
+</li>
 </template>
 
 <script>
@@ -11,8 +11,8 @@ export default {
   name: 'mahlzeiten',
   props: {
     meals: Object
+  },
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
